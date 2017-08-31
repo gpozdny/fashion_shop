@@ -10,7 +10,8 @@ $border-color: #95989A;
 @import "fonts/font-awesome.min";
 @import "_misc/mixins";
 @import "_misc/adjustment";
-@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "plugins/hamburgers/hamburgers";
+
 
 
 
