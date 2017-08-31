@@ -1,0 +1,33 @@
+.brands {
+  display: flex;
+  padding: 60px 0;
+}
+
+.brands__title  {
+  color: #434343;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.brands__list {
+  display: flex;
+  justify-content: flex-start;
+  //align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.brands__item  {
+  width: calc(100% / 6);
+  height: 150px;
+  margin-bottom: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include laptop {
+    width: calc(100% / 5);
+  }
+  @include phones {
+    width: calc(100% / 3);
+  }
+}

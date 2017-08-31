@@ -1,0 +1,55 @@
+// vars
+
+$main-color: #666666;
+$hover-color: #FF75C9;
+$border-color: #95989A;
+
+
+//imports
+@import "plugins/bootstrap.min";
+@import "fonts/font-awesome.min";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+
+
+// sections
+@import "sections/header";
+@import "sections/sales";
+@import "sections/shop";
+@import "sections/promo";
+@import "sections/brands";
+@import "sections/footer";
+
+
+// adjustments
+
+.maincontent  {
+  flex-direction: column;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+section, header {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+body  {
+  opacity: 1;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    color: #fff !important;
+    text-decoration: none;
+  }
+}
+
+

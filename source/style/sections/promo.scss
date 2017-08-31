@@ -1,0 +1,126 @@
+.promo  {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 90px 0;
+  background-color: $main-color;
+}
+
+.promo__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo__title {
+  text-transform: uppercase;
+  color: $border-color;
+  font-size: 40px;
+  margin-bottom: 30px;
+  white-space: nowrap;
+}
+
+.promo__timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timer__block {
+  position: relative;
+  display: flex;
+  padding: 7px 14px;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 29px;
+    &:last-child{
+      margin-right: 0;
+    }
+}
+
+.timer__date  {
+  position: absolute;
+  text-transform: uppercase;
+  color: $border-color;
+  font-size: 13px;
+  bottom: -20px;
+}
+
+.timer__digit {
+  font-size: 40px;
+  color: $border-color;
+}
+
+.promo__bot {
+  display: flex;
+  margin-top: 80px;
+}
+
+.item__price-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.item__price-line {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 10px;
+}
+
+.slider__items-wrap {
+  display: flex;
+
+}
+
+.slider-fix {
+  margin-bottom: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+}
+
+.siema  {
+  position: relative;
+}
+
+.prev {
+  background-image: url(../img/icons/arrow.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  height: 34px;
+  width: 20px;
+  left: -25px;
+  top: 50%;
+  cursor: pointer;
+  transition: .3s ease;
+    &:hover{
+      filter:brightness(150%);
+    }
+    &:active  {
+      filter:brightness(300%);
+    }
+}
+
+.next {
+  position: absolute;
+  background-image: url(../img/icons/arrow.png);
+  background-size: cover;
+  background-position: center;
+  height: 34px;
+  width: 20px;
+  right: -25px;
+  top: 50%;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: .3s ease;
+    &:hover{
+      filter:brightness(150%);
+    }
+    &:active  {
+      filter:brightness(300%);
+    }
+}

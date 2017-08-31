@@ -1,0 +1,45 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        block title
+            title Main page
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto')
+
+
+        //- favicon block start
+        //- favicon block end
+
+        <!--[if lt IE 9]>
+        script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+        <![endif]-->
+        style(type='text/css').
+            body {
+                opacity: 0;
+                overflow-x: hidden;
+            }
+            html {
+                background-color: #434343;
+            }
+    body
+        .wrapper
+            .maincontent
+                include ../sections/header.pug
+                include ../sections/sales.pug
+                include ../sections/shop.pug
+                include ../sections/promo.pug
+                include ../sections/brands.pug
+            include ../sections/footer.pug
+
+
+
+        link(rel='stylesheet' href='assets/css/foundation.css')
+        link(rel='stylesheet' href='assets/css/app.css')
+        script(src='assets/js/foundation.js' defer)
+        script(src='assets/js/plugins.js' defer)
+        script(src='assets/js/app.js' defer)

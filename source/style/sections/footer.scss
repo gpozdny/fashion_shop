@@ -1,0 +1,138 @@
+.footer {
+  background-color: #121212;
+}
+
+.footer__top  {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 45px 0;
+  flex-wrap: nowrap;
+    @include tablets  {
+      flex-wrap: wrap;
+    }
+    @include phones {
+      flex-direction: column;
+    }
+}
+
+.footer__left, .footer__mid, .footer__right {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  @include tablets  {
+    width: 40%;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer__left, .footer__mid {
+  margin-right: 50px;
+}
+
+.footer__logo {
+  margin-bottom: 25px;
+}
+
+.footer__desc {
+  p {
+    color: #ffffff;
+    word-wrap: break-word;
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+.footer__mid, .footer__right  {
+  margin-top: 15px;
+}
+
+.footer__instagram {
+  margin-bottom: 10px;
+}
+
+.footer__instagram-title  {
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer__list-pic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin-right: -8px;
+}
+
+.list-pic__item {
+  margin-bottom: 10px;
+  transition: .3s ease;
+  margin-right: 8px;
+    &:hover {
+      filter: brightness(150%);
+    }
+}
+
+.list-pic__picture  {
+  height: 60px;
+  width: 60px;
+}
+
+.footer__right  {
+
+}
+
+.footer__right-title  {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer__right-wrap  {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__right-list {
+  display: flex;
+  flex-direction: column;
+  @include tablets  {
+    justify-content: flex-start;
+  }
+}
+
+.footer__right-item {
+  display: flex;
+  padding: 5px 0;
+}
+
+.footer__right-link {
+  font-size: 14px;
+  color: #ffffff;
+  transition: color .3s ease;
+    &:hover {
+      color: $hover-color;
+    }
+}
+
+.footer__bot  {
+  display: flex;
+  background-color: #000000;
+  width: 100%;
+}
+
+.footer__bot-copyright  {
+  font-size: 13px;
+  color: $border-color;
+}
+
+.footer__bot  {
+  .container  {
+    padding: 5px 0;
+  }
+}
