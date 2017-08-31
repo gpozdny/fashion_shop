@@ -174,3 +174,10 @@
     border-color: $hover-color;
   }
 }
+
+.menu-fix {
+  display: none;
+    @include phones {
+      display: block;
+    }
+}

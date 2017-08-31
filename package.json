@@ -28,6 +28,7 @@
     "gulp.spritesmith": "^6.2.1"
   },
   "dependencies": {
+    "hamburgers": "^0.9.1",
     "normalize.css": "^4.2.0"
   },
   "main": "gulpfile.js",
