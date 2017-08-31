@@ -1,6 +1,7 @@
 // add siema
 const mySiema = new Siema({
 
+    perPage: 4,
     easing: 'cubic-bezier(.17,.67,.32,1.34)',
     duration: 800
 

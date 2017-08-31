@@ -17,6 +17,9 @@
 .header__menu {
   position: relative;
   padding: 36px 0;
+  @include phones {
+    padding-bottom: 20px;
+  }
   &:before {
     content: '';
     background: rgba(0,0,0, 0.6);
@@ -29,13 +32,17 @@
 }
 
 .header__logo {
-
+  @include phones {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .header__wrap-adj {
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
 }
 
@@ -43,6 +50,12 @@
   display: flex;
   flex-grow: 2;
   padding: 0 20px 0 50px;
+    @include laptop {
+      padding-left: 25px;
+    }
+    @include tablets  {
+      display: none;
+    }
     @include phones {
       display: none;
     }
@@ -78,8 +91,15 @@
 .header__right {
   display: flex;
   align-items: center;
+  @include tablets  {
+    flex: 2;
+    justify-content: center;
+    margin-right: 55px;
+  }
   @include phones {
-    margin-top: 20px;
+    justify-content: flex-start;
+    flex: 1;
+    margin-bottom: 13px;
   }
 }
 
@@ -97,7 +117,9 @@
   &:focus {
     border: 1px solid $hover-color;
     text-decoration: none;
-
+  }
+  @include tablets  {
+    max-width: 150px;
   }
 }
 
@@ -183,13 +205,13 @@
 .menu-fix {
   display: none;
   outline: none;
-    @include phones {
+    @include tablets {
       display: block;
       z-index: 1111;
       position: fixed;
-      top: 40px;
+      top: 35px;
       right: 10px;
-      background-color: rgba(102, 102, 102, 0.87);
+      background: rgba(0,0,0, 0.6);
       border-radius: 5px;
     }
 }
