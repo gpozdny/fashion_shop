@@ -75,9 +75,7 @@
 }
 
 .slider__items-wrap > div > div > li {
-  @include tablets  {
-    margin: auto;
-  }
+  margin: auto;
 }
 
 .siema  {
