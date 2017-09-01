@@ -106,6 +106,7 @@ $(document).ready(function () {
         recursion();
     }
 // header responsive fixed
+function headerFix() {
 
     $(window).scroll(function() {
 
@@ -122,5 +123,14 @@ $(document).ready(function () {
         }
 
     });
+}
+
+function checkPosition() {
+    if (window.matchMedia('(max-width: 768px)').matches){
+        headerFix()
+    }
+}
+
+    checkPosition()
 
 });
