@@ -72,15 +72,9 @@
 
 .slider__items-wrap {
   //display: flex;
-
 }
 
-.slider-fix {
-  margin-bottom: 0;
-    &:first-child {
-      margin-left: 0;
-    }
-}
+.slider__items-wrap > div > div > li { margin: auto; }
 
 .siema  {
   position: relative;
@@ -97,6 +91,9 @@
   top: 50%;
   cursor: pointer;
   transition: .3s ease;
+    @include laptop {
+      left: 0;
+    }
     &:hover{
       filter:brightness(150%);
     }
@@ -117,6 +114,9 @@
   cursor: pointer;
   transform: rotate(180deg);
   transition: .3s ease;
+    @include laptop {
+      right: 0;
+    }
     &:hover{
       filter:brightness(150%);
     }

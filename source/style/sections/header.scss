@@ -17,8 +17,14 @@
 .header__menu {
   position: relative;
   padding: 36px 0;
+  transition: .4s ease;
+  @include tablets  {
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+  }
   @include phones {
-    padding-bottom: 20px;
+    padding: 15px 0 10px 0;
   }
   &:before {
     content: '';
@@ -30,6 +36,14 @@
     left: 0;
   }
 }
+
+.header__menu--responsive {
+  padding: 6px 0 6px 0;
+  &:before  {
+    background: rgba(0,0,0, 0.8);
+  }
+}
+
 
 .header__logo {
   @include phones {
@@ -208,10 +222,9 @@
     @include tablets {
       display: block;
       z-index: 1111;
-      position: fixed;
-      top: 35px;
-      right: 10px;
-      background: rgba(0,0,0, 0.6);
+      position: absolute;
+      top: 0;
+      right: 0;
       border-radius: 5px;
     }
 }
