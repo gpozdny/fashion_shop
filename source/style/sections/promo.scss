@@ -74,7 +74,11 @@
   //display: flex;
 }
 
-.slider__items-wrap > div > div > li { margin: auto; }
+.slider__items-wrap > div > div > li {
+  @include tablets  {
+    margin: auto;
+  }
+}
 
 .siema  {
   position: relative;
