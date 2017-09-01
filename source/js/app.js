@@ -4,6 +4,7 @@ $(document).ready(function () {
     const mySiema = new Siema({
 
         perPage: {
+            1920: 4,
             1300: 4,
             992: 3,
             768: 2,
