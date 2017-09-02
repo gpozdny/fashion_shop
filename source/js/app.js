@@ -1,20 +1,40 @@
 $(document).ready(function () {
 
-    // add siema
-    const mySiema = new Siema({
+// slick-carousel
 
-        perPage: {
-            480: 1,
-            768: 2,
-            992: 3,
-            1300: 4
-        },
-        easing: 'cubic-bezier(.17,.67,.32,1.34)',
-        duration: 800
-
+    $('.siema').slick({
+        dots: false,
+        infinite: false,
+        speed: 800,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        // make it responsive
+        responsive: [
+            {
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 548,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
-    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    document.querySelector('.next').addEventListener('click', () => mySiema.next());
 
 // timer
 
@@ -105,55 +125,26 @@ $(document).ready(function () {
 
         recursion();
     }
-// header responsive fixed
-//     $(window).resize(function() {
-//
-//         checkPosition();
-//
-//     });
-//     $(window).scroll(function() {
-//
-//         var scrollTop = $("body").scrollTop();
-//
-//         if (window.matchMedia('(max-width: 768px)').matches){
-//             if( scrollTop > 0 ) {
-//
-//                 $(".header__menu").addClass("header__menu--responsive");
-//
-//             } else {
-//
-//                 $(".header__menu").removeClass("header__menu--responsive");
-//
-//             }
-//         }
-//
-//     }).resize(function() {
-//
-//         if( window.screen.width <= 768 ) {
-//
-//             $(".header__menu").removeClass("header__menu--responsive");
-//
-//         }
-//
-//     });
-
+// header responsive fix
     $(window).scroll(function() {
 
         var scrollTop = $("body").scrollTop();
 
-        if( scrollTop > 0 && window.screen.width <= 768 ) {
+        if (window.matchMedia('(max-width: 768px)').matches){
+            if( scrollTop > 0 ) {
 
-            $(".header__menu").addClass("header__menu--responsive");
+                $(".header__menu").addClass("header__menu--responsive");
 
-        } else {
+            } else {
 
-            $(".header__menu").removeClass("header__menu--responsive");
+                $(".header__menu").removeClass("header__menu--responsive");
 
+            }
         }
-
+// class-remove fix
     }).resize(function() {
 
-        if( window.screen.width <= 768 ) {
+        if( window.screen.width > 768 ) {
 
             $(".header__menu").removeClass("header__menu--responsive");
 

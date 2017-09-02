@@ -11,6 +11,7 @@ $border-color: #95989A;
 @import "_misc/mixins";
 @import "_misc/adjustment";
 @import "plugins/hamburgers/hamburgers";
+@import "plugins/slick";
 
 
 
@@ -52,6 +53,13 @@ a {
     color: #fff !important;
     text-decoration: none;
   }
+}
+
+button {
+  outline: none;
+    &:focus {
+      outline: none;
+    }
 }
 
 
