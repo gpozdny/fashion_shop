@@ -3,6 +3,7 @@
 $main-color: #666666;
 $hover-color: #FF75C9;
 $border-color: #95989A;
+$text: #434343;
 
 
 //imports
@@ -23,6 +24,9 @@ $border-color: #95989A;
 @import "sections/promo";
 @import "sections/brands";
 @import "sections/footer";
+@import "sections/header-fixed";
+@import "sections/goods__top";
+
 
 
 // adjustments

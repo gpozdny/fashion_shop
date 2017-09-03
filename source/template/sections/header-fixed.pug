@@ -1,0 +1,41 @@
+header.header__menu
+    .container
+        .row.align-content-center.header__wrap-adj
+            .header__logo
+                a(class='logo__link' href='#')
+                    img(class='logo__pic' src='assets/img/logo.png')
+            nav.header__nav
+                ul.nav__list
+                    li.nav__item
+                        a(class='nav__item-link' href='#home') Home
+                    li.nav__item
+                        a(class='nav__item-link' href='#women') Women
+                    li.nav__item
+                        a(class='nav__item-link' href='#men') Men
+                    li.nav__item
+                        a(class='nav__item-link' href='#men') Kids
+                    li.nav__item
+                        a(class='nav__item-link' href='#sale') Sale
+            button.hamburger.hamburger--spring.menu-fix(type='button')
+                span.hamburger-box
+                    span.hamburger-inner
+            .menu
+                .menu__left
+                .menu__right
+                ul.menu__items
+                    li.menu__item
+                        a(href="#").menu__link Home
+                    li.menu__item
+                        a(href="#").menu__link Women
+                    li.menu__item
+                        a(href="#").menu__link Men
+                    li.menu__item
+                        a(href="#").menu__link Kids
+                    li.menu__item
+                        a(href="#").menu__link Sale
+
+            .header__right
+                .search-bar
+                    input(class="search-bar__type" type="text" placeholder="Search")
+                .cart
+                    a(class="cart__link" href="#" style="background-image: url(assets/img/icons/cart.png)")
