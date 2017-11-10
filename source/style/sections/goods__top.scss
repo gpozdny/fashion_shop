@@ -2,12 +2,21 @@
 //  border-bottom: 1px solid $border-color;
 //}
 
+
 .desc {
-  padding: 60px 0;
+  padding: 70px 0;
+  @include tablets  {
+    padding: 120px 0 70px 0;
+  }
+  @include phones {
+    padding: 80px 0;
+  }
+  position: relative;
 }
 
 .desc__right {
   padding-right: 0;
+  padding-left: 0.9375rem;
 }
 
 .desc__left {
@@ -15,18 +24,32 @@
   flex-direction: column;
   align-items: flex-start;
   padding-left: 0;
+  padding-right: 0.9375rem;
+  @include tablets  {
+    margin-bottom: 20px;
+  }
+}
+
+.desc__right, .desc__left {
+  width: 50%;
+  position: relative;
+  @include tablets  {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
 }
 
 .desc__left-top {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .desc__title  {
   color: $text;
   font-size: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .desc__category {
@@ -68,7 +91,7 @@
 
 .desc__left-mid {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
     p {
       margin: 0;
       color: $text;
@@ -82,7 +105,6 @@
 .desc__form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .desc__form-inputs  {
@@ -123,17 +145,20 @@
 
 .desc__form-btn {
   position: absolute;
-  right: 15px;
+  right:  15px;
   bottom: 0;
   text-transform: uppercase;
   border: 0;
   background-color: #727272;
   color: #ffffff;
-  padding: 10px 31px;
+  padding: 5px 20px;
   border-radius: 20px;
   font-size: 15px;
   cursor: pointer;
   transition: .3s ease;
+  @include phones {
+    padding: 5px 15px;
+  }
     &:hover {
       background-color: $border-color;
     }
@@ -154,6 +179,7 @@
 .gallery__big-img, .gallery__small-img  {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .gallery__big-pic {

@@ -37,9 +37,9 @@
   border-bottom: 2px solid $main-color;
     &:hover {
       .shop__item-desc  {
-        bottom: 0;
-        transition:.4s ease;
-      }
+          bottom: 0;
+          transition:.4s ease;
+        }
     }
     &:after {
       content: ' ';

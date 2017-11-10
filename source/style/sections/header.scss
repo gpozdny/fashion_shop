@@ -111,13 +111,17 @@
     margin-right: 55px;
   }
   @include phones {
-    justify-content: flex-start;
+    justify-content: flex-end;
     flex: 1;
+    margin-right: 70px;
   }
 }
 
 .search-bar {
   margin-right: 15px;
+  @include phones {
+    display: none;
+  }
 }
 
 .search-bar__type {

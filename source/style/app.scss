@@ -26,6 +26,8 @@ $text: #434343;
 @import "sections/footer";
 @import "sections/header-fixed";
 @import "sections/goods__top";
+@import "sections/goods__bot";
+@import "sections/cart";
 
 
 
@@ -54,7 +56,7 @@ a {
     text-decoration: none;
   }
   &:focus {
-    color: #fff !important;
+    color: $hover-color !important;
     text-decoration: none;
   }
 }

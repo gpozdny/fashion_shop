@@ -134,7 +134,7 @@ $(document).ready(function () {
 // header responsive fix
     $(window).scroll(function() {
 
-        var scrollTop = $("body").scrollTop();
+        var scrollTop = $("body, html").scrollTop();
 
         if (window.matchMedia('(max-width: 768px)').matches){
             if( scrollTop > 0 ) {
@@ -158,4 +158,23 @@ $(document).ready(function () {
 
     });
 
+});
+
+
+// slick carousel gallery
+
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
 });

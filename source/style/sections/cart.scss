@@ -1,0 +1,179 @@
+.table  {
+  padding: 70px 0;
+  margin: 0;
+  @include tablets  {
+    padding: 120px 0 70px 0;
+  }
+  @include phones {
+    padding: 80px 0 70px 0;
+  }
+}
+
+.table__wrap  {
+  display: flex;
+  flex-direction: column;
+  width: 100%;;
+}
+
+.table__item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $main-color;
+  transition: text-decoration .2s;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      color: #000;
+    }
+}
+
+.table__item-pic  {
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  margin-right: 10px;
+}
+
+.table-title {
+  font-size: 30px;
+  color: $main-color;
+  opacity: 0.3;
+  margin-bottom: 40px;
+}
+
+.table__header, .table__item, .table__hollow  {
+  display: flex;
+  //align-content: stretch;
+  border: 1px solid $border-color;
+}
+
+.table--cell  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+  border-right: 1px solid $border-color;
+    &:last-child  {
+      border: 0;
+    }
+}
+
+.table__cell-text {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.table__header {
+  border-radius: 10px 10px 0 0;
+}
+
+.table__hollow  {
+  border-radius: 0 0 10px 10px;
+}
+
+.table__item-cell, .table__item-info  {
+  width: 30%;
+}
+
+
+
+.table__price, .table__item-price  {
+  width: 10%;
+  @include phones {
+    width: 17%;
+  }
+}
+
+.table__size,  .table__qty, .table__item-size,  .table__item-qty  {
+  width: 10%;
+  @include phones {
+    width: 13%;
+  }
+}
+
+.table__additional, .table__item-params  {
+  width: 40%;
+  @include phones {
+    width: 28%;
+  }
+}
+
+.table__empty, .table__item-remove  {
+  width: 27%;
+}
+
+.table__remove-btn  {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $main-color;
+  position: relative;
+  opacity: .7;
+  transition: opacity 0.2s;
+    &:before  {
+      position: absolute;
+      font-family: FontAwesome;
+      content: "\f00d";
+      color: red;
+      left: -10px;
+      @include phones {
+        left: -5px;
+      }
+    }
+    &:hover {
+      opacity: 1;
+    }
+}
+
+.table__buttons {
+  margin-top: 25px;
+  align-self: flex-end;
+}
+
+.btns {
+  text-transform: uppercase;
+  border: 0;
+  background-color: #727272;
+  color: #ffffff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: .3s ease;
+  &:hover {
+    background-color: $border-color;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.related__cart  {
+  display: flex;
+  flex-direction: column;
+}
+
+.related__items-item--cart  {
+  max-width: 270px;
+  margin-bottom: 15px;
+  flex: 1 1 270px;
+  margin-left: 20px;
+}
+
+.related  {
+  padding: 70px 0;
+}
+
+.related__items-list--cart  {
+  justify-content: center;
+  margin-left: -20px;
+}

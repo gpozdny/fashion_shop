@@ -1,7 +1,7 @@
 section.desc
     .container.container--desc
         .row
-            .desc__left.col-sm-6
+            .desc__left
                 .desc__left-top
                     h3.desc__title Red tight shirt
                     .desc__wrap-category
@@ -45,16 +45,27 @@ section.desc
                             input(type="radio" class="quantity__5 radio" value="xs" name="Quantity" id="5")
                             label(for="5") 5
                         button(type="submit" form="choose__form" value="Submit").desc__form-btn add to cart
-            .desc__right.col-sm-6
-                .gallery__big-pic
-                    img(src="assets/img/gallery/big-pic.png").gallery__big-img
-                .gallery__small-wrap
+            .desc__right
+                .gallery__big-pic.slider-for
+                    .gallery__big-pic
+                        img(src="assets/img/gallery/big-pic.png").gallery__big-img
+                    .gallery__big-pic
+                        img(src="assets/img/gallery/catholder1.jpg").gallery__big-img
+                    .gallery__big-pic
+                        img(src="assets/img/gallery/catholder2.jpg").gallery__big-img
+                    .gallery__big-pic
+                        img(src="assets/img/gallery/catholder3.jpg").gallery__big-img
+                    .gallery__big-pic
+                        img(src="assets/img/gallery/catholder4.jpg").gallery__big-img
+                .gallery__small-wrap.slider-nav
                     .gallery__small-pic
-                        img(src="assets/img/gallery/small-pic.png").gallery__small-img
+                        img(src="assets/img/gallery/big-pic.png").gallery__small-img
                     .gallery__small-pic
-                        img(src="assets/img/gallery/small-pic.png").gallery__small-img
+                        img(src="assets/img/gallery/catholder1.jpg").gallery__small-img
                     .gallery__small-pic
-                        img(src="assets/img/gallery/small-pic.png").gallery__small-img
+                        img(src="assets/img/gallery/catholder2.jpg").gallery__small-img
                     .gallery__small-pic
-                        img(src="assets/img/gallery/small-pic.png").gallery__small-img
+                        img(src="assets/img/gallery/catholder3.jpg").gallery__small-img
+                    .gallery__small-pic
+                        img(src="assets/img/gallery/catholder4.jpg").gallery__small-img
 
